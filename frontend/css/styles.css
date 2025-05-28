@@ -129,12 +129,22 @@ body {
     text-decoration: none;
     display: inline-block;
     color: white;
+    margin: 0.5rem;
+    min-width: 160px;
+    text-align: center;
 }
 
 .btn-custom:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+@media (max-width: 768px) {
+    .btn-custom {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
 }
 
 /* Section Styling */
@@ -376,6 +386,11 @@ section {
 
     .location-center {
         margin-top: 1rem;
+    }
+
+    .btn-custom {
+        width: 80%;
+        margin: 0.5rem auto;
     }
 }
 
