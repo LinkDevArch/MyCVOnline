@@ -102,10 +102,15 @@ body {
     transform: scale(1.05);
 }
 
+.hero-title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    margin: 1.5rem 0;
     background: linear-gradient(45deg, #ffffff, #e2e8f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -190,7 +195,7 @@ section {
 .about-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--medium-gray);
+    color: var(--dark-color);
 }
 
 .stats {
@@ -352,7 +357,14 @@ section {
 }
 
 .fade-in-up {
+    width: auto;
     animation: fadeInUp 0.6s ease-out;
+}
+
+@media (max-width: 1400px) {
+    .hero-title {
+        font-size: 3rem;
+    }
 }
 
 /* Responsive Design */
@@ -438,7 +450,7 @@ body.dark-mode {
 }
 
 .dark-mode .about-text {
-    color: #94a3b8;
+    color: #ffffff;
 }
 
 .dark-mode .stat-number {
