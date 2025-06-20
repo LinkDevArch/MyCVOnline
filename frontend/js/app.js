@@ -57,24 +57,33 @@ if (profileImg) {
 
 // Add typing effect to hero title
 function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+    return new Promise(resolve => {
+        let i = 0;
+        element.innerHTML = '';
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                resolve();
+            }
         }
-    }
-    type();
+        type();
+    });
 }
 
 // Initialize typing effect when page loads
-window.addEventListener('load', function () {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 50);
+window.addEventListener('load', async function () {
+    document.querySelector('.hero-title2').style.visibility = 'hidden';
+    const heroTitle1 = document.querySelector('.hero-title1');
+    const heroTitle2 = document.querySelector('.hero-title2');
+    if (heroTitle1 && heroTitle2) {
+        const originalText1 = heroTitle1.textContent;
+        const originalText2 = heroTitle2.textContent;
+        await typeWriter(heroTitle1, originalText1, 70);
+        document.querySelector('.hero-title2').style.visibility = 'visible';
+        await typeWriter(heroTitle2, originalText2, 70);
     }
 });
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkDevArch - Systems Engineer Portfolio</title>
+    <title data-i18n="title">LinkDevArch - Portafolio de Ingeniero de Sistemas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <i class="fas fa-code"></i> Johan Bedoya
+                <i class="fas fa-code"></i> <span data-i18n="brand">Johan Bedoya</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -25,21 +25,31 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" id="nav-home" data-i18n="nav.home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" id="nav-about" data-i18n="nav.about">Acerca de</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" id="nav-skills" data-i18n="nav.skills">Habilidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects" id="nav-projects" data-i18n="nav.projects">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" id="nav-contact" data-i18n="nav.contact">Contacto</a>
                     </li>
                 </ul>
+                <!-- Language Switcher Dropdown -->
+                <div class="dropdown ms-2 me-3">
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe"></i> <span id="current-lang">ES</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item lang-option" href="#" data-lang="es">Español</a></li>
+                        <li><a class="dropdown-item lang-option" href="#" data-lang="en">English</a></li>
+                    </ul>
+                </div>
                 <button id="darkModeToggle" class="btn btn-link nav-link">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -57,22 +67,20 @@
                             <i class="fas fa-user-tie"></i>
                         </div>
                         <div class="hero-title-container">
-                            <h1 class="hero-title">Hey!</h1>
-                            <h1 class="hero-title">I'm Johan Bedoya</h1>
-
-                            <p class="hero-subtitle">Systems Engineering Student & Backend Developer</p>
-                            <p class="mb-4" style="font-size: 1.1rem; opacity: 0.9;">
-                                Passionate about creating robust solutions with Spring Boot and exploring the full-stack
-                                development world. 💪
+                            <h1 class="hero-title1" data-i18n="hero.hey">¡Hola!</h1>
+                            <h1 class="hero-title2" data-i18n="hero.im">Soy Johan Bedoya</h1>
+                            <p class="hero-subtitle" data-i18n="hero.subtitle">Estudiante de Ingeniería de Sistemas & Desarrollador Backend</p>
+                            <p class="mb-4" style="font-size: 1.1rem; opacity: 0.9;" data-i18n="hero.desc">
+                                Apasionado por crear soluciones robustas con Spring Boot y explorar el mundo del desarrollo full-stack. 💪
                             </p>
                         </div>
                         <!-- Hero Section buttons -->
                         <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <a href="#about" class="btn-custom">
-                                <i class="fas fa-user me-2"></i>About Me
+                            <a href="#about" class="btn-custom" data-i18n="hero.aboutBtn">
+                                <i class="fas fa-user me-2"></i>Sobre mí
                             </a>
-                            <a href="#contact" class="btn-custom">
-                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            <a href="#contact" class="btn-custom" data-i18n="hero.contactBtn">
+                                <i class="fas fa-envelope me-2"></i>Contáctame
                             </a>
                         </div>
                     </div>
@@ -92,45 +100,37 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Me</h2>
+                <h2 data-i18n="about.title">Sobre mí</h2>
             </div>
             <div class="about-content">
                 <div>
-                    <p class="about-text">
-                        I'm a Systems Engineering student primarily focused on backend development. I'm passionate about
-                        creating robust solutions with technologies like Spring Boot, and I also have knowledge of HTML,
-                        CSS, JavaScript and React, which allows me to excel in frontend development when the occasion
-                        calls for it.
+                    <p class="about-text" data-i18n="about.p1">
+                        Soy estudiante de Ingeniería de Sistemas enfocado principalmente en desarrollo backend. Me apasiona crear soluciones robustas con tecnologías como Spring Boot, y también tengo conocimientos de HTML, CSS, JavaScript y React, lo que me permite destacar en el desarrollo frontend cuando es necesario.
                     </p>
-                    <p class="about-text">
-                        Currently expanding my knowledge in testing, security, and microservices architecture. I believe
-                        in writing clean, maintainable code and following best practices.
+                    <p class="about-text" data-i18n="about.p2">
+                        Actualmente amplío mis conocimientos en testing, seguridad y arquitectura de microservicios. Creo en escribir código limpio, mantenible y seguir buenas prácticas.
                     </p>
-                    <p class="about-text">
-                        <strong style="font-weight: 700;">Why you should work with me?</strong> <br><br/>
-
-                        I am a very responsible and committed person, not only at work but also in my personal life. I
-                        am passionate about what I do, and I do it because I love it. I enjoy constantly learning new
-                        things; this means I'm willing to adapt to new and future technologies. I enjoy teaching what I
-                        know and sharing knowledge. I believe I can be a key part of any team.
+                    <p class="about-text" data-i18n="about.p3">
+                        <strong style="font-weight: 700;" data-i18n="about.whyTitle">¿Por qué deberías trabajar conmigo?</strong> <br><br/>
+                        Soy una persona muy responsable y comprometida, no solo en el trabajo sino también en mi vida personal. Me apasiona lo que hago y lo hago porque me gusta. Disfruto aprender cosas nuevas constantemente; esto significa que estoy dispuesto a adaptarme a nuevas y futuras tecnologías. Me gusta enseñar lo que sé y compartir conocimiento. Creo que puedo ser una parte clave de cualquier equipo.
                     </p>
                 </div>
                 <div class="stats">
                     <div class="stat-item">
                         <div class="stat-number">1+</div>
-                        <p>Years Learning</p>
+                        <p data-i18n="about.stats.years">Años Aprendiendo</p>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">10+</div>
-                        <p>Technologies</p>
+                        <p data-i18n="about.stats.techs">Tecnologías</p>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">3+</div>
-                        <p>Projects</p>
+                        <p data-i18n="about.stats.projects">Proyectos</p>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">100%</div>
-                        <p>Dedication</p>
+                        <p data-i18n="about.stats.dedication">Dedicación</p>
                     </div>
                 </div>
             </div>
@@ -141,131 +141,120 @@
     <section id="skills">
         <div class="container">
             <div class="section-title">
-                <h2><i class="fas fa-rocket"></i> Technologies & Skills</h2>
+                <h2><i class="fas fa-rocket"></i> <span data-i18n="skills.title">Tecnologías & Habilidades</span></h2>
             </div>
-
             <!-- Backend Skills -->
             <div class="skill-category">
-                <h3><i class="fas fa-server"></i> Backend</h3>
+                <h3><i class="fas fa-server"></i> <span data-i18n="skills.backend">Backend</span></h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fab fa-java"></i>
                         </div>
                         <h5>Java</h5>
-                        <p>Core programming language</p>
+                        <p data-i18n="skills.java">Lenguaje principal</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-leaf"></i>
                         </div>
                         <h5>Spring Boot</h5>
-                        <p>MVC, JPA, REST APIs</p>
+                        <p data-i18n="skills.spring">MVC, JPA, APIs REST</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-database"></i>
                         </div>
-                        <h5>Databases</h5>
-                        <p>MySQL / SQL Server / PostgreSQL</p>
+                        <h5 data-i18n="skills.dbTitle">Bases de Datos</h5>
+                        <p data-i18n="skills.db">MySQL / SQL Server / PostgreSQL</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <h5>Build Tools</h5>
-                        <p>Maven / Gradle</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <h5>Jakarta EE</h5>
-                        <p>Currently Learning</p>
+                        <h5 data-i18n="skills.buildTitle">Herramientas de Build</h5>
+                        <p data-i18n="skills.build">Maven / Gradle</p>
                     </div>
                 </div>
             </div>
-
             <!-- Frontend Skills -->
             <div class="skill-category">
-                <h3><i class="fas fa-palette"></i> Frontend</h3>
+                <h3><i class="fas fa-palette"></i> <span data-i18n="skills.frontend">Frontend</span></h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h5>Web Technologies</h5>
-                        <p>HTML / CSS / JavaScript / React</p>
+                        <h5 data-i18n="skills.webTitle">Tecnologías Web</h5>
+                        <p data-i18n="skills.web">HTML / CSS / JavaScript / React</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-puzzle-piece"></i>
                         </div>
                         <h5>Thymeleaf</h5>
-                        <p>Template Engine</p>
+                        <p data-i18n="skills.thymeleaf">Motor de plantillas</p>
                     </div>
                 </div>
             </div>
-
             <!-- Other Skills -->
             <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Other Tools</h3>
+                <h3><i class="fas fa-tools"></i> <span data-i18n="skills.other">Otras Herramientas</span></h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fab fa-git-alt"></i>
                         </div>
-                        <h5>Version Control</h5>
-                        <p>Git & GitHub</p>
+                        <h5 data-i18n="skills.gitTitle">Control de Versiones</h5>
+                        <p data-i18n="skills.git">Git & GitHub</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fab fa-linux"></i>
                         </div>
-                        <h5>Linux Terminal</h5>
-                        <p>Command Line Enthusiast</p>
+                        <h5 data-i18n="skills.linuxTitle">Terminal Linux</h5>
+                        <p data-i18n="skills.linux">Entusiasta de la línea de comandos</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-cloud"></i>
                         </div>
-                        <h5>API Testing</h5>
-                        <p>Postman</p>
+                        <h5 data-i18n="skills.apiTitle">Pruebas de API</h5>
+                        <p data-i18n="skills.api">Postman</p>
                     </div>
                 </div>
             </div>
-
             <!-- Currently Learning -->
             <div class="skill-category">
-                <h3><i class="fas fa-graduation-cap"></i> Currently Learning</h3>
+                <h3><i class="fas fa-graduation-cap"></i> <span data-i18n="skills.learning">Aprendiendo Actualmente</span></h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-vial"></i>
                         </div>
-                        <h5>Testing</h5>
-                        <p>JUnit & Mockito</p>
+                        <h5 data-i18n="skills.testingTitle">Testing</h5>
+                        <p data-i18n="skills.testing">JUnit & Mockito</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h5>Spring Security</h5>
-                        <p>Advanced Security</p>
+                        <h5 data-i18n="skills.securityTitle">Spring Security</h5>
+                        <p data-i18n="skills.security">Seguridad avanzada</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fas fa-cubes"></i>
                         </div>
-                        <h5>Architecture</h5>
-                        <p>SOLID Principles</p>
+                        <h5 data-i18n="skills.archTitle">Arquitectura</h5>
+                        <p data-i18n="skills.arch">Principios SOLID</p>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
                             <i class="fab fa-docker"></i>
                         </div>
-                        <h5>Microservices</h5>
-                        <p>Docker & Containers</p>
+                        <h5 data-i18n="skills.microTitle">Microservicios</h5>
+                        <p data-i18n="skills.micro">Docker & Contenedores</p>
                     </div>
                 </div>
             </div>
@@ -276,7 +265,7 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-title">
-                <h2>Featured Projects</h2>
+                <h2 data-i18n="projects.title">Proyectos Destacados</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -284,8 +273,8 @@
                         <div class="project-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <h5>Product Management</h5>
-                        <p>Complete CRUD application built with Spring Boot and Thymeleaf for managing products.</p>
+                        <h5 data-i18n="projects.p1.title">Gestión de Productos</h5>
+                        <p data-i18n="projects.p1.desc">Aplicación CRUD completa construida con Spring Boot y Thymeleaf para gestionar productos.</p>
                         <div class="d-flex flex-wrap gap-2 mb-3">
                             <span class="badge bg-primary">Java</span>
                             <span class="badge bg-success">Spring Boot</span>
@@ -297,8 +286,8 @@
                             <span class="badge bg-dark">PostgreSQL/SQLServer</span>
                         </div>
                         <a href="https://crudspringboot-p247.onrender.com/products" target="_blank"
-                            class="btn btn-outline-primary">
-                            <i class="fas fa-external-link-alt me-2"></i>View Project
+                            class="btn btn-outline-primary" data-i18n="projects.p1.btn">
+                            <i class="fas fa-external-link-alt me-2"></i>Ver Proyecto
                         </a>
                     </div>
                 </div>
@@ -307,9 +296,8 @@
                         <div class="project-icon">
                             <i class="fas fa-tasks"></i>
                         </div>
-                        <h5>ToDoLister</h5>
-                        <p>Application that allows you to manage tasks in a list; tasks can be deleted or completed, and
-                            you can also filter them.</p>
+                        <h5 data-i18n="projects.p2.title">ToDoLister</h5>
+                        <p data-i18n="projects.p2.desc">Aplicación que permite gestionar tareas en una lista; las tareas pueden eliminarse o completarse, y también puedes filtrarlas.</p>
                         <div class="d-flex flex-wrap gap-2 mb-3">
                             <span class="badge bg-primary">Java</span>
                             <span class="badge bg-success">Spring Boot</span>
@@ -321,8 +309,8 @@
                             <span class="badge bg-dark">PostgreSQL/SQLServer</span>
                         </div>
                         <a href="https://todolister-qdp4.onrender.com/tasks" target="_blank"
-                            class="btn btn-outline-primary">
-                            <i class="fas fa-external-link-alt me-2"></i>View Project
+                            class="btn btn-outline-primary" data-i18n="projects.p2.btn">
+                            <i class="fas fa-external-link-alt me-2"></i>Ver Proyecto
                         </a>
                     </div>
                 </div>
@@ -331,9 +319,8 @@
                         <div class="project-icon">
                             <i class="fas fa-film"></i>
                         </div>
-                        <h5>Next Marvel Movie API Connection</h5>
-                        <p>Web app that connects to the McuFilm API to display information about upcoming Marvel movies,
-                            using Springboot for the connection and Bootstrap for the styles.</p>
+                        <h5 data-i18n="projects.p3.title">Conexión API Próxima Película Marvel</h5>
+                        <p data-i18n="projects.p3.desc">Web que se conecta a la API McuFilm para mostrar información sobre próximas películas de Marvel, usando Spring Boot y Bootstrap.</p>
                         <div class="d-flex flex-wrap gap-2 mb-3">
                             <span class="badge bg-primary">Java</span>
                             <span class="badge bg-success">Spring Boot</span>
@@ -342,33 +329,9 @@
                             <span class="badge bg-primary">Bootstrap</span>
                         </div>
                         <a href="https://nextmarvelmovieapiconnection-production.up.railway.app/" target="_blank"
-                            class="btn btn-outline-primary">
-                            <i class="fas fa-external-link-alt me-2"></i>View Project
+                            class="btn btn-outline-primary" data-i18n="projects.p3.btn">
+                            <i class="fas fa-external-link-alt me-2"></i>Ver Proyecto
                         </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5">
-                <h4><i class="fas fa-handshake"></i> I'm interested in collaborating on...</h4>
-                <div class="row mt-4">
-                    <div class="col-md-4 mb-3">
-                        <div class="project-card">
-                            <h6><i class="fas fa-layer-group"></i> Architecture Projects</h6>
-                            <p>Projects with well-thought-out architecture or those wanting to improve it</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="project-card">
-                            <h6><i class="fas fa-server"></i> Backend Solutions</h6>
-                            <p>REST APIs, Java backends, and educational or social impact applications</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="project-card">
-                            <h6><i class="fas fa-book"></i> Best Practices</h6>
-                            <p>Projects using Spring, Jakarta EE, or exploring development best practices</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -379,10 +342,10 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2 style="color: white;">Let's Connect</h2>
+                <h2 style="color: white;" data-i18n="contact.title">Conectemos</h2>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-8 gap-4">
                     <div class="row justify-content-center">
                         <!-- Email -->
                         <div class="col-md-4">
@@ -391,14 +354,13 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <h6>Email</h6>
+                                    <h6 data-i18n="contact.email">Correo</h6>
                                     <a href="mailto:linkdevarch@hotmail.com" target="_blank">
                                         <p>linkdevarch@hotmail.com</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
-
                         <!-- Location -->
                         <div class="col-md-4">
                             <div class="contact-item">
@@ -406,12 +368,11 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div>
-                                    <h6>Location</h6>
-                                    <p>Cali, Valle del Cauca, Colombia</p>
+                                    <h6 data-i18n="contact.location">Ubicación</h6>
+                                    <p data-i18n="contact.city">Cali, Valle del Cauca, Colombia</p>
                                 </div>
                             </div>
                         </div>
-
                         <!-- GitHub -->
                         <div class="col-md-4">
                             <div class="contact-item">
@@ -427,14 +388,13 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Contact Section buttons -->
                     <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
-                        <a href="mailto:linkdevarch@hotmail.com" class="btn-custom">
-                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        <a href="mailto:linkdevarch@hotmail.com" class="btn-custom" data-i18n="contact.send">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
                         </a>
-                        <a href="cv/CV.pdf" class="btn-custom" target="_blank" download>
-                            <i class="fas fa-download me-2"></i>Download CV
+                        <a href="cv/CV.pdf" class="btn-custom" target="_blank" download data-i18n="contact.cv">
+                            <i class="fas fa-download me-2"></i>Descargar CV
                         </a>
                     </div>
                 </div>
@@ -445,12 +405,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 LinkDevArch. Built with passion. ☕</p>
+            <p data-i18n="footer">&copy; 2025 LinkDevArch. Construido con pasión. ☕</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/lang.js"></script>
 </body>
-
 </html>
